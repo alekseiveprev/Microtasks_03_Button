@@ -22,7 +22,7 @@ export const App: FC<{ name: string }> = ({ name }) => {
         }}
       >  MyYouTubeChanel-1{' '}
       </button> */}
-      {/*  <button onClick={myFirstSubscriber}>MyYouTubeChanel-1</button>
+      {/*   <button onClick={myFirstSubscriber}>MyYouTubeChanel-1</button>
       <button onClick={mySecondSubscriber}>MyYouTubeChanel-1</button> */}
       <button
         onClick={(event: MouseEvent<HTMLButtonElement>) =>
@@ -32,9 +32,6 @@ export const App: FC<{ name: string }> = ({ name }) => {
         MyYouTubeChanel-1
       </button>
       <button onClick={() => onClickHandler('Ivan')}>MyYouTubeChanel-2</button>
-      <button onClick={() => onClickHandler('some info')}>
-        MyYouTubeChanel-3
-      </button>
     </div>
   );
 };
