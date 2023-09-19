@@ -1,37 +1,33 @@
 import { FC, MouseEvent } from 'react';
+import { Button } from './components/Button';
 /* import {MouseEvent} from 'react'; */
 import './style.css';
 
 export const App: FC<{ name: string }> = ({ name }) => {
-  /*   const myFirstSubscriber = (event: MouseEvent<HTMLButtonElement>) => {
-    console.log('Hello Im Vasia!');
-  };
-  const mySecondSubscriber = (event: MouseEvent<HTMLButtonElement>) => {
-    console.log('Hello Im Ivan!');
+  /*   const Button1Foo = () => {
+    console.log('I am Vasia!');
   }; */
+  const Button1Foo = (subscriber: string, age: number, addres: string) => {
+    console.log(subscriber, age, addres);
+  };
+  const Button2Foo = () => {
+    console.log('I am Ivan');
+  };
 
-  const onClickHandler = (name: string) => {
-    console.log(name);
+  const Button3Foo = () => {
+    console.log('I am Stupid Button');
   };
 
   return (
     <div className="App">
-      {/* <button
-        onClick={(event) => {
-          console.log('Hello');
-        }}
-      >  MyYouTubeChanel-1{' '}
-      </button> */}
-      {/*   <button onClick={myFirstSubscriber}>MyYouTubeChanel-1</button>
-      <button onClick={mySecondSubscriber}>MyYouTubeChanel-1</button> */}
-      <button
-        onClick={(event: MouseEvent<HTMLButtonElement>) =>
-          onClickHandler('Vasia!')
-        }
-      >
-        MyYouTubeChanel-1
-      </button>
-      <button onClick={() => onClickHandler('Ivan')}>MyYouTubeChanel-2</button>
+      {/*   <Button name={'MyYouTubeChanel-1'} callBack={Button1Foo} /> */}
+      <Button
+        name={'MyYouTubeChanel-1'}
+        callBack={() => Button1Foo('I am Vasia!', 21, 'live in Minsk')}
+      />
+      <Button name={'MyYouTubeChanel-2'} callBack={Button2Foo} />
+      <Button name={'Delete'} />
+      <Button name={'Stupid Button'} callBack={Button3Foo} />
     </div>
   );
 };
